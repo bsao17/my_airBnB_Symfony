@@ -1,0 +1,32 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+        <h1> {{title}} </h1>
+        <h2>my name is {{name}} </h2>
+
+    {% if age <= 18 %}
+        <div class="text-danger h4 bg-warning w-50 m-auto text-center p-3 rounded">Désolé vous êtes trop jeune pour vous inscrire</div>
+    {% else %}
+        <div class="text-success h4">Vous êtes majeur, vous pouvez donc vous inscrire  </div>
+    {% endif %}
+
+    {#
+
+    <ol>
+        {% for count in 0..10 %}
+            <li> Liste numéro => {{count}} </li>
+        {% endfor %}
+    </ol>
+    
+    #}
+
+    {% for prenom, age in tableau %}
+        {% if loop.first %}
+            <strong>{{prenom}} à {{age}} ans, </strong><br>
+        {% else %}
+            <em> {{prenom}} a {{age}} ans, </em><br>
+        {% endif %}
+    {% endfor %}
+
+{% endblock %}
+
