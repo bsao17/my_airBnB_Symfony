@@ -3,6 +3,7 @@
 namespace App\DataFixtures;
 
 use App\Entity\Ad;
+use App\Entity\Image;
 use Doctrine\Persistence\ObjectManager;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 
@@ -22,6 +23,16 @@ class AppFixtures extends Fixture
                 ->setRooms(rand(1, 5));
     
             $manager->persist($ad);
+        }
+
+        for ($i=0; $i<=1; $i)
+        {
+            $images = new Image;
+            $images->setUrl("https://via.placeholder.com/600x400")
+                    ->setCaption("Pictures_n° $i")
+                    ->setAd($ad);
+            
+            $manager->persist($images);
         }
 
 

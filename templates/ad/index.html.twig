@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nos magnifiques annonces !
+{% endblock %}
+
+{% block body %}
+	<div class="container">
+
+		<h1 class="my-4">Voici les annonces des nos hôtes</h1>
+
+		<div class="row">
+			{% for item in 1..20 %}
+				<div class="col-md-4">
+					<div class="card-bg-light mb-3">
+						<div class="card-header text-center">
+							3 chambres
+							<strong>49&euros; / Nuit</strong><br>
+							<small>Disponible de suite : </small>
+                            <span class="text-success"><i class="far fa-star"></i></span>
+						</div>
+
+						<img src="https://via.placeholder.com/1000x400" alt="Image de l'appartement" style=" height:200px; width: 100%; display: block">
+
+						<div class="card-body">
+							<div class="card-title">
+								Appartement de ouf !!!
+							</div>
+							<p class="card-text">
+								Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit adipisci odio, animi dolor dolore quod?
+							</p>
+							<a href="#" class="btn btn-secondary">En savoir plus</a>
+						</div>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+
+{% endblock %}
