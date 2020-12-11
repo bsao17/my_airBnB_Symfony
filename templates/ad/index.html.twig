@@ -9,12 +9,12 @@
 		<h1 class="my-4">Voici les annonces des nos hôtes</h1>
 
 		<div class="row">
-			{% for item in 1..20 %}
+			{% for ad in ads %}
 				<div class="col-md-4">
 					<div class="card-bg-light mb-3">
 						<div class="card-header text-center">
-							3 chambres
-							<strong>49&euros; / Nuit</strong><br>
+							{{ad.rooms}} chambres
+							<strong> {{ad.price}} € / Nuit</strong><br>
 							<small>Disponible de suite : </small>
                             <span class="text-success"><i class="far fa-star"></i></span>
 						</div>
