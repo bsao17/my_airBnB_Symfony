@@ -16,7 +16,7 @@ class AppFixtures extends Fixture
         for ($i=0; $i<=30; $i++){
             $ad = new Ad;
             $ad->setTitle("titre de l'annonce n°$i")
-                ->setCoverImage("https://via.placeholder.com/1000x300")
+                ->setCoverImage("https://https://fakeimg.pl/1000x300")
                 ->setIntroduction("voici ma nouvelle annonce qui devrait intéresser beaucoup de monde")
                 ->setContent("<p>Je suis le contenu de la nouvelle annonce de Bruno</p>")
                 ->setPrice(rand(30, 200))
